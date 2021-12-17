@@ -10,6 +10,7 @@ class thirdPage extends StatefulWidget {
 
 class _thirdPageState extends State<thirdPage> {
   String listUser = "Daftar User Kosong";
+  var page = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -19,6 +20,13 @@ class _thirdPageState extends State<thirdPage> {
             SafeArea(
                 child: Column(
                   children: <Widget>[
+                    Container(
+                      padding: EdgeInsets.all(10),
+                      child: TextField(
+                        controller: page,
+                        decoration: InputDecoration(label: Text('Page')),
+                      ),
+                    ),
                     Center(
                       child: Container(
                           padding: EdgeInsets.only(top: 20, bottom: 10),
@@ -26,7 +34,7 @@ class _thirdPageState extends State<thirdPage> {
                       ),
                     ),
                     ElevatedButton(
-                        onPressed: () => getManyUser.getUsers('2').then((users){
+                        onPressed: () => getManyUser.getUsers(page.text).then((users){
                           listUser = '';
                           for(int i = 0; i < users.length; i++){
                             listUser = listUser + '[' + users[i].name + ']';
