@@ -33,7 +33,7 @@ class _thirdPageState extends State<thirdPage> {
                             setState(() {});
                           }
                         }),
-                        child: Text('Get'))
+                        child: Text('Get Many'))
           ],
         ))
       ],

@@ -34,7 +34,7 @@ class _seoncdPageState extends State<seoncdPage> {
                           user = value;
                           setState(() {});
                         }),
-                        child: Text('Get'))
+                        child: Text('Get Single'))
                   ],
         ))
       ],
