@@ -25,11 +25,11 @@ class _seoncdPageState extends State<seoncdPage> {
                           padding: EdgeInsets.only(top: 20, bottom: 10),
                           child: Text((user != null)
                               ? "${user.id} | ${user.email} | ${user.firstName}"
-                              : 'Data kosong')),
+                              : 'Data kosong', textAlign: TextAlign.center,)),
                     ),
                     ElevatedButton(
                         onPressed: () => getSingleUser
-                            .apiRunningGet("2")
+                            .apiRunningGet("5")
                             .then((value) {
                           user = value;
                           setState(() {});
