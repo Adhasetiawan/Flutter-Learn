@@ -1,4 +1,5 @@
 import 'package:first_application/model/getMany_model.dart';
+import 'package:first_application/model/sample.dart';
 import 'package:flutter/material.dart';
 
 class thirdPage extends StatefulWidget {
@@ -11,6 +12,12 @@ class thirdPage extends StatefulWidget {
 class _thirdPageState extends State<thirdPage> {
   String listUser = "Daftar User Kosong";
   var page = TextEditingController();
+
+  // @override
+  // void initState() {
+  //   super.initState();
+  //   dataController().mappingUser(page.text = '2');
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -30,17 +37,11 @@ class _thirdPageState extends State<thirdPage> {
                     Center(
                       child: Container(
                           padding: EdgeInsets.only(top: 20, bottom: 10),
-                          child: Text(listUser, textAlign: TextAlign.center,)
+                          child: Text(listUser, textAlign: TextAlign.center)
                       ),
                     ),
                     ElevatedButton(
-                        onPressed: () => getManyUser.getUsers(page.text).then((users){
-                          listUser = '';
-                          for(int i = 0; i < users.length; i++){
-                            listUser = listUser + '[' + users[i].name + ']';
-                            setState(() {});
-                          }
-                        }),
+                        onPressed: (){},
                         child: Text('Get Many'))
           ],
         ))
