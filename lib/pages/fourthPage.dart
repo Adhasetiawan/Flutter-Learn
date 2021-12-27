@@ -34,38 +34,38 @@ class _fourthPageState extends State<fourthPage> {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Stack(
-      children: <Widget>[
-        SafeArea(
-            child: Column(
-              children: <Widget>[
-                Container(
-                  padding: EdgeInsets.all(10),
-                  child: TextField(
-                    controller: inputSatu,
-                    decoration: InputDecoration(hintText: 'Type something'),
+          children: <Widget>[
+            SafeArea(
+                child: Column(
+                  children: <Widget>[
+                    Container(
+                      padding: EdgeInsets.all(10),
+                      child: TextField(
+                        controller: inputSatu,
+                        decoration: InputDecoration(hintText: 'Type something'),
                   ),
                 ),
-                Switch(
+                    Switch(
                     value: isOn,
                     onChanged: (newValue) {
                       setState(() {
                         isOn = newValue;
                       });
                     }),
-                Container(
-                  padding: EdgeInsets.only(top: 10),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      Container(
-                          padding: EdgeInsets.symmetric(horizontal: 5),
-                          child: ElevatedButton(
-                              onPressed: () => saveData(), child: Text('Save'))),
-                      Container(
-                          padding: EdgeInsets.symmetric(horizontal: 5),
-                          child: ElevatedButton(
-                              onPressed: (){
-                                getSomething().then((a) {
+                    Container(
+                      padding: EdgeInsets.only(top: 10),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          Container(
+                            padding: EdgeInsets.symmetric(horizontal: 5),
+                            child: ElevatedButton(
+                                onPressed: () => saveData(), child: Text('Save'))),
+                          Container(
+                            padding: EdgeInsets.symmetric(horizontal: 5),
+                            child: ElevatedButton(
+                                onPressed: (){
+                                  getSomething().then((a) {
                                   inputSatu.text = a;
                                   setState(() {});
                                 });

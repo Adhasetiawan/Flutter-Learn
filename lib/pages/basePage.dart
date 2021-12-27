@@ -1,3 +1,4 @@
+import 'package:first_application/pages/fifthPage.dart';
 import 'package:first_application/pages/firstPage.dart';
 import 'package:first_application/pages/fourthPage.dart';
 import 'package:first_application/pages/secondPage.dart';
@@ -87,7 +88,38 @@ class _basePageState extends State<basePage> {
                       ),
                     ),
                   ],
-                )
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    GestureDetector(
+                      onTap: ()=> Navigator.push(context, MaterialPageRoute(builder: (context) => fifthPage())),
+                      child: Container(
+                        margin: EdgeInsets.fromLTRB(10, 5, 5, 10),
+                        height: 100,
+                        width: 100,
+                        child: Card(
+                          shadowColor: Colors.black,
+                          elevation: 3,
+                          child: Center(child: Text('State Management', textAlign: TextAlign.center)),
+                        ),
+                      ),
+                    ),
+                    GestureDetector(
+                      onTap: (){},
+                      child: Container(
+                        margin: EdgeInsets.fromLTRB(5, 5, 10, 10),
+                        height: 100,
+                        width: 100,
+                        child: Card(
+                          shadowColor: Colors.black,
+                          elevation: 3,
+                          child: Center(child: Text('Provide State Management', textAlign: TextAlign.center,)),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
               ],
             )
           ],
