@@ -1,3 +1,4 @@
+import 'package:first_application/pages/SixPage.dart';
 import 'package:first_application/pages/fifthPage.dart';
 import 'package:first_application/pages/firstPage.dart';
 import 'package:first_application/pages/fourthPage.dart';
@@ -106,7 +107,7 @@ class _basePageState extends State<basePage> {
                       ),
                     ),
                     GestureDetector(
-                      onTap: (){},
+                      onTap: ()=> Navigator.push(context, MaterialPageRoute(builder: (context)=> sixPage())),
                       child: Container(
                         margin: EdgeInsets.fromLTRB(5, 5, 10, 10),
                         height: 100,
