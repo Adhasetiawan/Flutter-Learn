@@ -1,5 +1,6 @@
 import 'package:first_application/pages/SixPage.dart';
 import 'package:first_application/pages/bloacState.dart';
+import 'package:first_application/pages/blocPubDev.dart';
 import 'package:first_application/pages/fifthPage.dart';
 import 'package:first_application/pages/firstPage.dart';
 import 'package:first_application/pages/fourthPage.dart';
@@ -55,19 +56,7 @@ class _basePageState extends State<basePage> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
                     uiTemplate().boxButton(context, blocState(), 'Bloc State'),
-                    GestureDetector(
-                      onTap: null,
-                      child: Container(
-                        margin: EdgeInsets.fromLTRB(5, 5, 10, 10),
-                        height: 100,
-                        width: 100,
-                        child: Card(
-                          shadowColor: Colors.black,
-                          elevation: 3,
-                          child: Center(child: Text('Bloc', textAlign: TextAlign.center,)),
-                        ),
-                      ),
-                    ),
+                    uiTemplate().boxButton(context, blocPubDev(), 'Bloc State Lib'),
                   ],
                 ),
               ],
