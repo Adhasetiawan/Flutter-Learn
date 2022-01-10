@@ -7,20 +7,7 @@ class blocPubDev extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (context) => colorBlocLib(),
-      child: blocColorView(),
-    );
-  }
-}
-
-class blocColorView extends StatelessWidget {
-  const blocColorView({Key key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
     var bloc = BlocProvider.of<colorBlocLib>(context);
-
     return Scaffold(
       floatingActionButton: Row(
         mainAxisAlignment: MainAxisAlignment.end,
