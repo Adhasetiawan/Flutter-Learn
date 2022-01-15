@@ -1,9 +1,6 @@
-import 'dart:async';
-import 'package:first_application/bloc/blocLibState.dart';
 import 'package:first_application/pages/basePage.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hydrated_bloc/hydrated_bloc.dart';
 import 'package:path_provider/path_provider.dart';
 
@@ -23,11 +20,8 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (context) => colorBlocLib(),
-      child: MaterialApp(
-          home: basePage(),
-        ),
+    return MaterialApp(
+      home: basePage(),
     );
   }
 }
